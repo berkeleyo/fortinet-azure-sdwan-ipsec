@@ -1,7 +1,9 @@
-# fortinet-azure-sdwan-ipsec
 
-Reference configs and diagrams for Fortinet SD-WAN + IPsec to Azure hub-and-spoke.
+# Fortinet SD-WAN/IPsec to Azure
 
-## Getting started
-- Clone and explore.
-- Use the CI workflows as examples.
+Reference configs + notes for connecting FortiGate to Azure hub-and-spoke.
+
+## Notes
+- Use route-based VPN on FortiGate
+- In Azure: use Virtual Network Gateway (VpnGw SKU)
+- Enable MSS clamping if you see fragmentation on IPsec
