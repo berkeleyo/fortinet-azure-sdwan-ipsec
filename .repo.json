@@ -1,0 +1,10 @@
+{
+  "description": "Reference configs and diagrams for Fortinet SD-WAN + IPsec to Azure hub-and-spoke.",
+  "topics": [
+    "fortinet",
+    "sd-wan",
+    "ipsec",
+    "azure-networking"
+  ],
+  "created": "2025-10-15"
+}
