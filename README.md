@@ -1,18 +1,25 @@
-﻿![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+# Fortinet Azure SD-WAN over IPsec
+Reference hub-spoke design with redundant IPsec tunnels to FortiGate.
 
-# fortinet-azure-sdwan-ipsec
+## Topology
+```mermaid
+graph LR
+  ONPREM[Branch] ==IPsec==> FGW[FortiGate]
+  FGW --> HubVnet[Hub VNet + Azure FW]
+  HubVnet --> SpokeA[Spoke A]
+  HubVnet --> SpokeB[Spoke B]
+```
 
-Reference configs and diagrams for Fortinet SD-WAN + IPsec to Azure hub-and-spoke.
+## Example Tunnel
+```json
+{
+  "tunnelName": "branch-a",
+  "peerIp": "203.0.113.10",
+  "pskSecretRef": "kv://sdwan/psk-branch-a",
+  "ikeVersion": 2,
+  "dpd": true
+}
+```
 
-## Getting started
-- Clone and explore.
-- Use the CI workflows as examples.
-
-
----
-
-# Fortinet Azure SD-WAN IPsec
-
-Reference IPsec stanzas and Azure notes. Replace with vendor-validated configs for production.
-
+## Outcome
+- Dual tunnel up; failover **~3–5s** via SLA probe
