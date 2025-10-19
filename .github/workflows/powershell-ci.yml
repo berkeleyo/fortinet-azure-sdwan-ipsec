@@ -1,0 +1,15 @@
+﻿name: ps-ci
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: pwsh
+        run: |
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force -SkipPublisherCheck
+          if (Test-Path 'scripts') {
+            Invoke-ScriptAnalyzer -Path 'scripts' -Recurse -Severity Information,Warning,Error
+          } else { Write-Host 'No scripts folder; skipping.' }
