@@ -1,4 +1,16 @@
 ﻿# Operational Runbook
-- Health: FortiGate 'get vpn ipsec tunnel summary', Azure metrics.
-- Change/rollback: keep previous UDRs/PSK; MOP timestamps.
-- KPIs: availability %, reconnections, latency, drops.
+
+## Day-2 checks
+- IPsec SAs up, DPD stable
+- BGP adjacencies (if used) established
+- Uptime/health alerts clean
+
+## Common tasks
+- Rotate pre-shared keys (PSKs)
+- Add a new branch tunnel
+- Update UDRs and validate effective routes
+
+## Change control checklist
+- Impact analysis
+- Backout plan
+- Test plan and success criteria

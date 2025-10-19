@@ -1,0 +1,30 @@
+﻿site_name: Fortinet Azure SD-WAN IPsec
+site_description: Reference IPsec configs and notes for Azure SD-WAN topologies
+site_url: https://berkeleyo.github.io/fortinet-azure-sdwan-ipsec/
+repo_name: berkeleyo/fortinet-azure-sdwan-ipsec
+repo_url: https://github.com/berkeleyo/fortinet-azure-sdwan-ipsec
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Architecture: ARCHITECTURE.md
+  - Deployment Guide: DEPLOYMENT_GUIDE.md
+  - Operational Runbook: OPERATIONAL_RUNBOOK.md
+  - Troubleshooting: TROUBLESHOOTING.md
+  - FAQ: FAQ.md
