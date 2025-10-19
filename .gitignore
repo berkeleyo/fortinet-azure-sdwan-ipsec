@@ -1,8 +1,18 @@
+﻿# OS/editor
 .DS_Store
-*.log
+Thumbs.db
 .vscode/
 .idea/
-__pycache__/
-*.zip
-bin/
+
+# Outputs
 out/
+*.log
+
+# Python/PowerShell
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node (if used)
+node_modules/
+dist/
