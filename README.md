@@ -2,6 +2,7 @@
  [![docs](https://github.com/berkeleyo/fortinet-azure-sdwan-ipsec/actions/workflows/docs.yml/badge.svg)](https://github.com/berkeleyo/fortinet-azure-sdwan-ipsec/actions/workflows/docs.yml)
 [![ps-ci](https://github.com/berkeleyo/fortinet-azure-sdwan-ipsec/actions/workflows/powershell-ci.yml/badge.svg)](https://github.com/berkeleyo/fortinet-azure-sdwan-ipsec/actions/workflows/powershell-ci.yml)
 
+🔗 **Docs site:** https://berkeleyo.github.io/fortinet-azure-sdwan-ipsec/
 
 Design, deploy, and operate **Fortinet SD-WAN with IPsec on Azure** with clear docs and a repeatable runbook.
 
